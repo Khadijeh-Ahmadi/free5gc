@@ -1,0 +1,63 @@
+apiVersion: k8s.startkubernetes.com.my.domain/v1
+kind: Free5gc
+metadata:
+  labels:
+    app.kubernetes.io/name: free5gc-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: free5gc-sample
+spec:
+  amf:
+    image: towards5gs/free5gc-amf
+    replicas: 1
+    network:
+      port: 29500
+      address: "127.0.0.1"
+  smf:
+    image: towards5gs/free5gc-smf
+    replicas: 1
+    network:
+      port: 8000
+      address: "127.0.0.1"
+  ausf:
+    image: towards5gs/free5gc-ausf
+    replicas: 1
+    network:
+      port: 5002
+      address: "127.0.0.1"
+  pcf:
+    image: towards5gs/free5gc-pcf
+    replicas: 1
+    network:
+      port: 5003
+      address: "127.0.0.1"
+  nrf:
+    image: towards5gs/free5gc-nrf
+    replicas: 1
+    network:
+      port: 5004
+      address: "127.0.0.1"
+  upf:
+    image: towards5gs/free5gc-upf
+    replicas: 1
+    network:
+      port: 5005
+      address: "127.0.0.1"
+  udm:
+    image: towards5gs/free5gc-udm
+    replicas: 1
+    network:
+      port: 5006
+      address: "127.0.0.1"
+  udr:
+    image: towards5gs/free5gc-udr
+    replicas: 1
+    network:
+      port: 5007
+      address: "127.0.0.1"
+  nssf:
+    image: towards5gs/free5gc-nssf
+    replicas: 1
+    network:
+      port: 5008
+      address: "127.0.0.1"
+  
